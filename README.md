@@ -6,6 +6,11 @@ A java Interface to run a python script named "routinecheck.py". Use Run-button 
 
 
 
+![Java Interface](interface.jpg)
+
+
+
+
 ### routinecheck.py
 routinecheck.py is a routine work to write file in a specified number of seconds
 
