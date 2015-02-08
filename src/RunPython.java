@@ -22,15 +22,6 @@ public class RunPython extends JFrame implements WindowListener {
 		 System.out.println("Run Python begin");
 	
 		 new RunPython();
-		 /*
-		 ProcessBuilder pb = new ProcessBuilder("python","routinecheck.py");
-				 try {
-					System.out.println("begin process");
-					Process p = pb.start();
-				} catch (IOException e) {
-					System.out.println(e);
-					e.printStackTrace();
-				} */
 	}
 	
 	public RunPython() {
@@ -55,7 +46,13 @@ public class RunPython extends JFrame implements WindowListener {
 						 pb =  new ProcessBuilder("python","routinecheck.py");
 					}
 					System.out.println("pb start");
+					
+					if (p != null) {
+						p.destroy();
+					}
+					
 					p = pb.start();
+					
 				} catch (IOException e) {
 					e.printStackTrace();
 					System.out.println("Process Create Failed");
@@ -71,7 +68,7 @@ public class RunPython extends JFrame implements WindowListener {
 				if (p!=null) {
 					System.out.println("process destroy");
 					p.destroy();
-					pb = null;
+					//pb = null;
 				}
 			}			
 		});
